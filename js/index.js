@@ -114,6 +114,9 @@ function f2() {
     timeId = setInterval(clickHandle, 4000);
 }
 
+
+
+
 //获取person下的元素
 var per = my$("person");
 //获取detail下的元素
@@ -145,4 +148,34 @@ for (var i = 0; i < spans.length; i++) {
         //为第几个属性添加class="current"
         lis[num].className = "current";
     };
+}
+
+
+//二维码的显示与隐藏
+var nodesh=my$("node_small");
+nodesh.onmouseover=function() {
+    my$("er").className="erweima node-show";
+}
+nodesh.onmouseout=function() {
+    my$("er").className="erweima node-hide";
+}
+
+
+//返回顶部
+var toTop =my$("backtop"); 
+window.onscroll = function(){
+    //距离页面顶部的距离
+    var distance = document.documentElement.scrollTop || document.body.scrollTop; 
+    //当距离顶部超过300px时，显示图片
+    if( distance >= 400 ) { 
+        toTop.style.display = "";
+    } else { 
+        //距离顶部小于300px，隐藏图片
+        toTop.style.display = "none";
+    }
+    //获取图片所在的div  
+    toTop.onclick = function(){ 
+        //点击图片时触发的点击事件
+        document.documentElement.scrollTop = document.body.scrollTop = 0; //页面移动到顶部
+    }
 }

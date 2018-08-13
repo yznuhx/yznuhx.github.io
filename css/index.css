@@ -372,3 +372,42 @@ header,.full,footer {
     box-shadow: 0 15px 30px rgba(0,0,0,.3);
 }
 /* joinus end */
+
+.nodenav .node-show {
+	display: block;
+  }
+.nodenav .node-hide {
+	display: none;
+}
+.nodenav {
+	position: fixed;
+	right: 100px;
+	top: 76%;
+}
+.nodenav .nodeSmall {
+	width: 50px;
+	height: 50px;
+	background: url(../images/bgs.png);
+	background-size: cover;
+	cursor: pointer;
+}
+.nodenav .erweima {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: -158px;
+	border: 1px solid #C9C9C9;
+	background-image: url(../images/node.jpg);
+	background-size: cover;
+}
+.nodenav .backtop {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	margin-top: 10px;
+	color: #F7B8B4;
+	cursor: pointer;
+}
