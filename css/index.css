@@ -1,0 +1,359 @@
+/*头部开始*/
+header {
+	width: 1280px;
+	margin: 0 auto;
+	height: 80px;
+	background-color: #f2f2f2;
+	
+}
+.logo {
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-image: url(../images/logo.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	float: left;
+	margin-top: 10px;
+	margin-left: 120px;
+	line-height: 100px;
+	transition: 1s;
+}
+.logo:hover {
+	transform: rotate(360deg);
+}
+.nav {
+	width: 900px;
+	float: left;
+	margin-left: 80px;
+
+}
+.nav a {
+	display: block;
+	float: left;
+	color: #393D49;
+	font-size: 24px;
+	line-height: 80px;
+	margin: 0 32px;
+}
+.nav a:hover {
+	color: #84ac67;
+	text-decoration-line: none;
+}
+.head-bg {
+	width: 1280px;
+	height: 338px;
+	margin: 0 auto;
+	background-image: url(../images/head-bg.jpg);
+}
+/*头部结束*/
+/*协会概况部分开始*/
+
+.overview {
+	width: 1160px;
+	margin: 0 auto;
+	padding: 40px 0 100px 120px;
+	background-color: #f2f2f2;
+}
+.overview .title {
+	margin-bottom: 40px;
+}
+.overview .title i {
+	font-size: 30px;
+	color: #ed5b46;
+	float: left;
+	margin-right: 20px;
+}
+.overview .title p {
+	display: block;
+	font-size: 24px;
+	color: #ed5b46;
+	float: left;
+}
+.overview .int .article {
+	float: left;
+	width: 400px;
+	height: 350px;
+	margin-right: 100px;
+	font-family: KaiTi,Serif
+}
+.overview .int .article p {
+	font-size: 20px;
+	text-indent: 2em;
+	line-height: 36px;
+}
+.overview .int .article p:nth-child(2) {
+	margin-bottom: 10px;
+}
+.overview .int .article h1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+.overview .int .img {
+	float: left;
+	width: 500px;
+	height: 350px;
+}
+/*协会概况部分结束*/
+/*活动部分*/
+.activity {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 40px 160px 100px 120px;
+}
+.activity .title {
+	margin-bottom: 40px;
+}
+.activity .title i {
+	font-size: 30px;
+	color: #FC9E68;
+	float: left;
+	margin-right: 20px;
+}
+.activity .title p {
+	display: block;
+	font-size: 24px;
+	color: #FC9E68;
+	float: left;
+}
+.activity .ac-sort {
+	position: relative;
+}
+.activity .hd-ac {
+	width: 800px;
+	height: 460px;
+	
+	overflow: hidden;
+	position: relative;
+	margin-left: 100px;
+}
+.activity .hd-ac ul li {
+	float: left;
+}
+.activity .hd-ac ul p {
+	font-size: 20px;
+	text-align: center;
+	margin: 16px 0;
+}
+.activity .hd-ac ul {
+	width: 4800px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.activity .hd-detail ol {
+    position: absolute;
+    margin-top: 10px;
+    left: 50%;
+    margin-left: -60px;
+}
+.activity .hd-detail ol li {
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: #fff;
+	border: 1px solid #EDEBED;
+	border-radius: 50%;
+    margin-left: 10px;
+	cursor: pointer;
+}
+.activity .hd-detail ol li:hover {
+	background-color: #7DCADD;
+}
+.activity .hd-detail ol li.current {
+    background-color: #1B8BB8;
+}
+/* #arr {
+    display: none;
+} */
+
+#arr span {
+	position: absolute;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: rgba(201,201,201,.5);
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 60px;
+    color: #fff;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -40px;
+    border-radius: 50%;
+}
+#arr span:hover {
+	background-color: rgba(34,136,246,.6);
+}
+#arr #right {
+    right: 1px;
+}
+/*活动部分结束*/
+/*footer部分*/
+footer {
+	width: 1280px;
+	background-color: #f2f2f2;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+footer div {
+	text-align: center;
+	margin-bottom: 10px;
+}
+footer a {
+	font-size: 16px;
+	margin: 0 20px;
+}
+footer p {
+	text-align: center;
+}
+/*footer end*/
+/* department begain */
+.department {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 40px 160px 100px 120px;
+	background-color: #f2f2f2;
+}
+.department .title {
+	margin-bottom: 40px;
+}
+.department .title i {
+	font-size: 30px;
+	color: #3885CA;
+	float: left;
+	margin-right: 20px;
+}
+.department .title p {
+	display: block;
+	font-size: 24px;
+	color: #3885CA;
+	float: left;
+}
+.department .person {
+	float: left;
+}
+.department .person span {
+	display: block;
+	width: 179px;
+	height: 60px;
+	background-color: #fff;
+	border: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 20px;
+	letter-spacing: 10px;
+	transition-duration: 1s;
+}
+.department .person span:hover {
+	cursor: pointer;
+	background-color: rgba(201, 201, 201, 0.2);
+	border: 1px solid #009688;
+}
+.department .person span.current {
+	
+	background-color: rgba(0,150,136,0.4);
+}
+.department .de-detail {
+	float: left;
+	width: 816px;
+	height: 420px;
+	margin-left: 1px;
+	overflow: hidden;
+	border: 1px solid #c9c9c9;
+}
+.department .de-detail li.current {
+	display: block;
+}
+.department .de-detail li {
+	width: 820px;
+	height: 420px;
+	display: none;
+}
+.department .de-detail  li img {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+}
+
+.department .de-detail li:nth-child(1) div:nth-child(1) {
+	width: 160px;
+	height: 200px;
+	float: left;
+}
+.department .de-detail li:nth-child(1) div:nth-child(1) img {
+	width: 160px;
+	height: 160px;
+}
+.department .de-detail li:nth-child(1) div:nth-child(1) {
+	margin: 10px 310px;
+}
+.department .de-detail li:nth-child(1) div:nth-child(2) {
+	margin-left: 130px ;
+}
+.de-detail li:nth-child(1) div {
+	width: 120px;
+	height: 160px;
+	float: left;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	margin: 10px 40px 0 40px;	
+}
+.department .de-detail li div {
+	width: 120px;
+	height: 160px;
+	float: left;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	margin: 40px 60px;	
+}
+.department .de-detail li div:nth-child(1) {
+	margin-left: 100px;
+}
+.de-detail li>p {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 40px;
+	margin-left: 40px;
+	
+}
+/* department end */
+/* joinus begain */
+.joinus {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 40px 160px 100px 120px;
+	
+}
+.joinus .title {
+	margin-bottom: 40px;
+}
+.joinus .title i {
+	font-size: 30px;
+	color: #577160;
+	float: left;
+	margin-right: 20px;
+}
+.joinus .title p {
+	display: block;
+	font-size: 24px;
+	color: #577160;
+	float: left;
+}
+.joinus div[class^=group] img {
+	width: 270px;
+	height: 300px;
+}
+.joinus div[class^=group] {
+	float: left;
+	margin-left: 160px;
+}
+
+/* joinus end */
