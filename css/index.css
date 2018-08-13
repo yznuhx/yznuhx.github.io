@@ -1,5 +1,9 @@
 /*头部开始*/
-header {
+header,.full,footer {
+	width: 100%;
+	background-color: #f2f2f2;
+}
+.header {
 	width: 1280px;
 	margin: 0 auto;
 	height: 80px;
@@ -150,10 +154,10 @@ header {
 }
 .activity .hd-detail ol li {
     float: left;
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
     background: #fff;
-	border: 1px solid #EDEBED;
+	border: 2px solid #EDEBED;
 	border-radius: 50%;
     margin-left: 10px;
 	cursor: pointer;
@@ -192,21 +196,21 @@ header {
 }
 /*活动部分结束*/
 /*footer部分*/
-footer {
+.footer {
 	width: 1280px;
 	background-color: #f2f2f2;
 	margin: 0 auto;
 	padding: 40px 0;
 }
-footer div {
+.footer div {
 	text-align: center;
 	margin-bottom: 10px;
 }
-footer a {
+.footer a {
 	font-size: 16px;
 	margin: 0 20px;
 }
-footer p {
+.footer p {
 	text-align: center;
 }
 /*footer end*/
@@ -254,7 +258,7 @@ footer p {
 	border: 1px solid #009688;
 }
 .department .person span.current {
-	
+	border-right: 1px solid #f2f2f2;
 	background-color: rgba(0,150,136,0.4);
 }
 .department .de-detail {
@@ -264,6 +268,7 @@ footer p {
 	margin-left: 1px;
 	overflow: hidden;
 	border: 1px solid #c9c9c9;
+	border-left: 1px solid #f2f2f2;
 }
 .department .de-detail li.current {
 	display: block;
@@ -347,13 +352,19 @@ footer p {
 	color: #577160;
 	float: left;
 }
-.joinus div[class^=group] img {
-	width: 270px;
-	height: 300px;
-}
-.joinus div[class^=group] {
+.joinus img {
 	float: left;
-	margin-left: 160px;
+	width: 212px;
+	height: 255px;
+	transition-duration: .5s;
 }
 
+.joinus img:nth-child(2) {
+	margin-right: 160px;
+	margin-left: 210px;
+}
+.joinus img:hover {
+	transform:translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+}
 /* joinus end */

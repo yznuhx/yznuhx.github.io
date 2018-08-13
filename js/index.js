@@ -8,7 +8,7 @@ var box = my$("box");
 //获取相框
 var screen = box.children[0];
 //获取相框的宽度
-var imgWidth = screen.offsetWidth + 1;
+var imgWidth = screen.offsetWidth;
 // console.log(imgWidth);
 //获取ul
 var ulObj = screen.children[0];
