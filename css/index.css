@@ -135,6 +135,10 @@ header,.full,footer {
 .activity .hd-ac ul li {
 	float: left;
 }
+.activity .hd-ac li img {
+	width: 799px;
+	height: 400px;
+}
 .activity .hd-ac ul p {
 	font-size: 20px;
 	text-align: center;
