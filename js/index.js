@@ -8,7 +8,7 @@ var box = my$("box");
 //获取相框
 var screen = box.children[0];
 //获取相框的宽度
-var imgWidth = screen.offsetWidth;
+var imgWidth = screen.offsetWidth-1;
 // console.log(imgWidth);
 //获取ul
 var ulObj = screen.children[0];
@@ -19,8 +19,6 @@ var olObj = box.children[1].children[0];
 // console.log(olObj);
 //获取ol中的li
 
-//焦点的div
-var arr = my$("arr");
 
 var liObj = olObj.children;
 // console.log(liObj[0]);
@@ -36,8 +34,8 @@ for (var i = 0; i < 4; i++) {
 }
 ulObj.appendChild(ulObj.children[0].cloneNode(true));
 var timeId = setInterval(clickHandle, 4000);
-olObj.onmouseover = f1;
-olObj.onmouseout = f2;
+// olObj.onmouseover = f1;
+// olObj.onmouseout = f2;
 function clickHandle() {
     //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
     //所以,如果用户再次点击按钮,用户应该看到第二个图片
@@ -84,6 +82,21 @@ function animate(element, target) {
         }
     }, 8);
 }
+//鼠标进入到box的div显示左右焦点的div
+//焦点的div
+var arr = my$("arr");
+var inSide=my$("box");
+inSide.onmouseover = function () {
+    arr.style.display = "block";
+    //鼠标进入废掉之前的定时器
+    clearInterval(timeId);
+};
+//鼠标离开到box的div隐藏左右焦点的div
+inSide.onmouseout = function () {
+    arr.style.display = "none";
+    //鼠标离开自动播放
+    timeId = setInterval(clickHandle, 4000);
+};
 //右边按钮
 my$("right").onclick = clickHandle;
 //左边按钮
@@ -103,10 +116,10 @@ my$("left").onclick = function () {
 
 };
 //添加左右按钮点击事件
-my$("left").onmouseover = f1;
-my$("left").onmouseout = f2;
-my$("right").onmouseover = f1;
-my$("right").onmouseout = f2;
+// my$("left").onmouseover = f1;
+// my$("left").onmouseout = f2;
+// my$("right").onmouseover = f1;
+// my$("right").onmouseout = f2;
 function f1() {
     clearInterval(timeId);
 }
@@ -140,7 +153,7 @@ for (var i = 0; i < spans.length; i++) {
         this.className = "current";
         // 获取当前span的index值
         var num = this.getAttribute("index");
-           
+
         //移除每个li的属性
         for (var k = 0; k < lis.length; k++) {
             lis[k].removeAttribute("class");
@@ -152,30 +165,40 @@ for (var i = 0; i < spans.length; i++) {
 
 
 //二维码的显示与隐藏
-var nodesh=my$("node_small");
-nodesh.onmouseover=function() {
-    my$("er").className="erweima node-show";
+var nodesh = my$("node_small");
+nodesh.onmouseover = function () {
+    my$("er").className = "erweima node-show";
 }
-nodesh.onmouseout=function() {
-    my$("er").className="erweima node-hide";
+nodesh.onmouseout = function () {
+    my$("er").className = "erweima node-hide";
 }
 
 
 //返回顶部
-var toTop =my$("backtop"); 
-window.onscroll = function(){
+var toTop = my$("backtop");
+window.onscroll = function () {
     //距离页面顶部的距离
-    var distance = document.documentElement.scrollTop || document.body.scrollTop; 
+    var distance = document.documentElement.scrollTop || document.body.scrollTop;
     //当距离顶部超过300px时，显示图片
-    if( distance >= 400 ) { 
-        toTop.style.display = "";
-    } else { 
+    if (distance >= 400) {
+        toTop.className = "node-show";
+    } else {
         //距离顶部小于300px，隐藏图片
-        toTop.style.display = "none";
+        toTop.className = "node-hide";
     }
     //获取图片所在的div  
-    toTop.onclick = function(){ 
-        //点击图片时触发的点击事件
-        document.documentElement.scrollTop = document.body.scrollTop = 0; //页面移动到顶部
+    // toTop.onclick = function () {
+    //     //点击图片时触发的点击事件
+    //     document.documentElement.scrollTop = document.body.scrollTop = 0; //页面移动到顶部
+    // }
+    toTop.onclick = function () {
+        timer = setInterval(function () {
+            var hTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var stepLength = 15;
+            document.documentElement.scrollTop = document.body.scrollTop = hTop - stepLength;
+            if (hTop == 0) {
+                clearInterval(timer);
+            }
+        }, 1);
     }
 }

@@ -102,9 +102,9 @@ header,.full,footer {
 /*协会概况部分结束*/
 /*活动部分*/
 .activity {
-	width: 1000px;
+	width: 1160px;
 	margin: 0 auto;
-	padding: 40px 160px 100px 120px;
+	padding: 40px 0px 100px 120px;
 }
 .activity .title {
 	margin-bottom: 40px;
@@ -127,10 +127,8 @@ header,.full,footer {
 .activity .hd-ac {
 	width: 800px;
 	height: 460px;
-	
 	overflow: hidden;
 	position: relative;
-	margin-left: 100px;
 }
 .activity .hd-ac ul li {
 	float: left;
@@ -153,13 +151,14 @@ header,.full,footer {
 .activity .hd-detail ol {
     position: absolute;
     margin-top: 10px;
-    left: 50%;
+    left: 402px;
     margin-left: -60px;
+    bottom: 80px;
 }
 .activity .hd-detail ol li {
     float: left;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     background: #fff;
 	border: 2px solid #EDEBED;
 	border-radius: 50%;
@@ -172,32 +171,56 @@ header,.full,footer {
 .activity .hd-detail ol li.current {
     background-color: #1B8BB8;
 }
-/* #arr {
-    display: none;
-} */
+#arr {
+	display: none;
+}
 
 #arr span {
 	position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 60px;
     text-align: center;
-    line-height: 80px;
+    line-height: 60px;
     background-color: rgba(201,201,201,.5);
     font-weight: bold;
     font-family: '黑体';
-    font-size: 60px;
+    font-size: 40px;
     color: #fff;
     cursor: pointer;
     top: 50%;
-    margin-top: -40px;
-    border-radius: 50%;
+    margin-top: -60px;
 }
 #arr span:hover {
 	background-color: rgba(34,136,246,.6);
 }
 #arr #right {
-    right: 1px;
+    left: 760px;
 }
+/* 最新活动部分 */
+.activity .newest {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 320px;
+	height: 400px;
+	/* background-color: pink; */
+	font-size: 20px;
+}
+.activity .newest p {
+	color: #EBA444;
+	font-size: 26px;
+	width: 200px;
+	
+	border-top: 5px solid #EBA444;
+	text-align: center;
+	margin-bottom: 40px;
+	letter-spacing: 20px;
+}
+.activity .newest a {
+	display: block;
+	margin-top: 20px;
+}
+/* 最新活动部分 */
 /*活动部分结束*/
 /*footer部分*/
 .footer {
@@ -216,6 +239,7 @@ header,.full,footer {
 }
 .footer p {
 	text-align: center;
+	margin-bottom: 10px;
 }
 /*footer end*/
 /* department begain */
@@ -356,23 +380,27 @@ header,.full,footer {
 	color: #577160;
 	float: left;
 }
-.joinus img {
-	float: left;
+.joinus .join-way {
 	width: 212px;
-	height: 255px;
+	height: 295px;
+	float: left;
 	transition-duration: .5s;
 }
-
-.joinus img:nth-child(2) {
-	margin-right: 160px;
-	margin-left: 210px;
+.joinus .join-way img {	
+	width: 212px;
+	height: 255px;
 }
-.joinus img:hover {
+.joinus .join-way p {
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+}
+.joinus .join-way:hover {
 	transform:translateY(-4px);
     box-shadow: 0 15px 30px rgba(0,0,0,.3);
-}
+} 
 /* joinus end */
-
+/* 二维码+返回顶部 开始*/
 .nodenav .node-show {
 	display: block;
   }
@@ -393,7 +421,7 @@ header,.full,footer {
 }
 .nodenav .erweima {
 	width: 150px;
-	height: 150px;
+	height: 170px;
 	overflow: hidden;
 	position: absolute;
 	top: 0px;
@@ -411,3 +439,4 @@ header,.full,footer {
 	color: #F7B8B4;
 	cursor: pointer;
 }
+/* 二维码+返回顶部 结束*/
